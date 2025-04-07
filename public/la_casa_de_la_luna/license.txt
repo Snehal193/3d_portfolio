@@ -1,0 +1,11 @@
+Model Information:
+* title:	La casa de la luna 🌙
+* source:	https://sketchfab.com/3d-models/la-casa-de-la-luna-040a1498020f4233a80a2e183c83be26
+* author:	IrinaLu (https://sketchfab.com/IrinaLu)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "La casa de la luna 🌙" (https://sketchfab.com/3d-models/la-casa-de-la-luna-040a1498020f4233a80a2e183c83be26) by IrinaLu (https://sketchfab.com/IrinaLu) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

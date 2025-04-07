@@ -73,7 +73,7 @@ const Experience = () => {
         <VerticalTimeline>
           {
             experiences.map((experience,index)=>(
-              <ExperienceCard experience ={experience} index={index} />
+              <ExperienceCard experience ={experience} key={`experience-${index}`} />
             ))
           }
         </VerticalTimeline>
