@@ -20,7 +20,7 @@ const Computers = ({isMobile}) => {
   )
 }
 
-const ComputersCanvas = () => {
+const CastleCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -48,12 +48,11 @@ const ComputersCanvas = () => {
       gl={{preserveDrawingBuffer:true}}
     >
       <Suspense>
-        <OrbitControls enableZoom={true} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2}></OrbitControls>
+        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2}></OrbitControls>
         <Computers isMobile={isMobile}/>
       </Suspense>
     </Canvas>
   )
-
 }
 
-export default ComputersCanvas
+export default CastleCanvas

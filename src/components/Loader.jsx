@@ -1,8 +1,12 @@
+import { Html } from '@react-three/drei'
 import React from 'react'
 
 const Loader = () => {
   return (
-    <div>Loader</div>
+     <Html>
+      <div>Loader</div>
+     </Html>
+
   )
 }
 
