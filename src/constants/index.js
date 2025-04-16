@@ -7,16 +7,16 @@ import {
     html,
     css,
     reactjs,
+    angularjs,
     redux,
     tailwind,
-    nodejs,
     git,
-    meta,
     shopify,
     kanbanBoard,
-    jobit,
-    tripguide,
     threejs,
+    firebase,
+    materialUI,
+    sass
   } from "../assets";
 
   export const navLinks = [
@@ -71,16 +71,12 @@ import {
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
+      name: "Angular JS",
+      icon: angularjs,
     },
     {
       name: "Tailwind CSS",
       icon: tailwind,
-    },
-    {
-      name: "Node JS",
-      icon: nodejs,
     },
     {
       name: "Three JS",
@@ -89,6 +85,18 @@ import {
     {
       name: "git",
       icon: git,
+    },
+    {
+      name: "firebase",
+      icon: firebase,
+    },
+    {
+      name: "materialUI",
+      icon: materialUI,
+    },
+    {
+      name: "sass",
+      icon: sass,
     }
   ];
 

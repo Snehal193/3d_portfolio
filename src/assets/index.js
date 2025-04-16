@@ -19,7 +19,12 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import threejs from "./tech/threejs.png";
+import angularjs from "./tech/angularjs.png";
+import sass from './tech/sass.png';
+import firebase from './tech/firebase.png';
+import materialUI from './tech/materialUI.png';
+
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -48,6 +53,7 @@ export {
   mongodb,
   nodejs,
   reactjs,
+  angularjs,
   redux,
   tailwind,
   typescript,
@@ -59,4 +65,7 @@ export {
   kanbanBoard,
   jobit,
   tripguide,
+  sass,
+  firebase,
+  materialUI,
 };
