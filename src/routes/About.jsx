@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
+import { Experience, Tech } from '../components';
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[350px] w-full'>
@@ -37,7 +38,7 @@ const ServiceCard = ({ index, title, icon }) => (
 const About = () => {
   return (
     <>
-       <motion.div variants={textVariant()}>
+       {/* <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
@@ -57,7 +58,9 @@ const About = () => {
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
-      </div>
+      </div> */}
+      <Tech/>
+      <Experience />
     </>
   )
 }
