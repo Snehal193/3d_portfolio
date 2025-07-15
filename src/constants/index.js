@@ -16,7 +16,8 @@ import {
     threejs,
     firebase,
     materialUI,
-    sass
+    sass,
+    education
   } from "../assets";
 
   export const navLinks = [
@@ -110,13 +111,20 @@ import {
       company_name: "Zelican Infotech Ltd.",
       icon: shopify,
       iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
+      date: "Jan 2023 - Jan 2024",
       points: [ //change
         "Engineered full-stack Kanban board with React DnD for drag-and-drop functionality and interactive board creation.",
         "Designed and deployed a responsive SPA with MUI featuring component-based architecture, custom hooks, and customizable theming.",
         "Executed scalable state management using Zustand and custom hooks, reducing boilerplate code by 50%, while integrating Firebase for real-time database, and user authentication."
       ],
-    }
+    },
+    {
+        title : 'BE in Information Technology',
+        company_name: "Datta Meghe College of Engineering, Navi mumbai.",
+        icon: education,
+        iconBg: "#383E56",
+        date: "Jan 2019 - Jan 2023",
+      }
   ];
 
   const projects = [

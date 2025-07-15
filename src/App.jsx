@@ -5,22 +5,31 @@ import Home from './routes/Home';
 import About from './routes/About';
 import Contact from './routes/Contact';
 import Works from './routes/Works';
+import MouseFollower from "./components/MouseFollower";
 
 
 const App = () => {
 
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={ <Home />}>
-        <Route index element={<Hero />} />
-        <Route path="/about" element={ <About />} />
-        <Route path="/projects" element={ <Works />} />
-        <Route path="/contact" element={ <Contact />} />
-        {/* <Route path="/snippets" element={ <About />} /> */}
-      </Route>
+      <div className="relative min-h-screen">
+        <div className="fixed inset-0 pointer-events-none z-50">
+          <MouseFollower />
+        </div>
+        <div className="relative z-10">
+          <Routes>
+            <Route path="/" element={<Home />}>
+              <Route index element={<Hero />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Works />} />
+              <Route path="/contact" element={<Contact />} />
+              {/* <Route path="/snippets" element={ <About />} /> */}
+            </Route>
+          </Routes>
+        </div>
 
-    </Routes>
+      </div>
+
       {/* <div className='relative z-0 bg-primary'>
         <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
           <Navbar />

@@ -28,6 +28,7 @@ import materialUI from './tech/materialUI.png';
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
+import education from "./company/education.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
@@ -60,6 +61,7 @@ export {
   threejs,
   meta,
   shopify,
+  education,
   starbucks,
   tesla,
   kanbanBoard,
