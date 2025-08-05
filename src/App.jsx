@@ -6,6 +6,7 @@ import About from './routes/About';
 import Contact from './routes/Contact';
 import Works from './routes/Works';
 import MouseFollower from "./components/MouseFollower";
+import SliderCaptcha from "./routes/SliderCaptcha";
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Works />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/captcha" element={<SliderCaptcha />} />
               {/* <Route path="/snippets" element={ <About />} /> */}
             </Route>
           </Routes>

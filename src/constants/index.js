@@ -111,11 +111,11 @@ import {
       company_name: "Zelican Infotech Ltd.",
       icon: shopify,
       iconBg: "#383E56",
-      date: "Jan 2023 - Jan 2024",
-      points: [ //change
-        "Engineered full-stack Kanban board with React DnD for drag-and-drop functionality and interactive board creation.",
-        "Designed and deployed a responsive SPA with MUI featuring component-based architecture, custom hooks, and customizable theming.",
-        "Executed scalable state management using Zustand and custom hooks, reducing boilerplate code by 50%, while integrating Firebase for real-time database, and user authentication."
+      date: "Jan 2023 - Jan 2025",
+      points: [
+        "Led frontend architecture, R&D, and module delivery using Angular, PrimeNG, and Tailwind CSS.",
+        "Built core modules with CRUD workflows, customizable tables, and advanced filters.",
+        "Implemented role-based access control (RBAC) and configurable admin settings for secure, firm-specific customization."
       ],
     },
     {
