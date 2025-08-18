@@ -22,9 +22,10 @@ const App = () => {
             <Route path="/" element={<Home />}>
               <Route index element={<Hero />} />
               <Route path="/about" element={<About />} />
-              <Route path="/projects" element={<Works />} />
+              <Route path="/projects" element={<Works />}>
+                <Route path="captcha" element={<SliderCaptcha />} />
+              </Route>
               <Route path="/contact" element={<Contact />} />
-              <Route path="/captcha" element={<SliderCaptcha />} />
               {/* <Route path="/snippets" element={ <About />} /> */}
             </Route>
           </Routes>

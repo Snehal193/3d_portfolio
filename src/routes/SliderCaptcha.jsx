@@ -4,35 +4,34 @@ import { SectionWrapper } from '../hoc';
 
 const SliderCaptcha = () => {
   const [sliderValue, setSliderValue] = useState(0);
-  const [rotation, setRotation] = useState({ inner: 90, outer: -90 }); // Start at 90 degrees
+  const [rotation, setRotation] = useState({ inner: 60, outer: -60 }); // Start at 90 degrees
   const [isSolved, setIsSolved] = useState(false);
-  const targetRotation = 0;
   const tolerance = 1;
 
   const resetCaptcha = () => {
     setSliderValue(0);
-    setRotation({ inner: 90, outer: -90 });
+    setRotation({ inner: 60, outer: -60 });
     setIsSolved(false);
   };
 
   const handleSliderChange = (e) => {
     const value = parseInt(e.target.value);
     setSliderValue(value);
-    
+
     // Convert slider value (0-100) to rotation degrees with 90-degree range
-    const innerRotation = 90 - (value / 100) * 180; // Start at 90°, end at -90°
-    const outerRotation = -90 + (value / 100) * 180; // Start at -90°, end at 90°
-    
+    const innerRotation = 60 - (value / 100) * 90; // Start at 90°, end at -90°
+    const outerRotation = -60 + (value / 100) * 90; // Start at -90°, end at 90°
+
     setRotation({
       inner: innerRotation,
       outer: outerRotation
     });
 
     // Stricter alignment check
-    const isInnerAligned = Math.abs(innerRotation % 360) <= tolerance;
-    const isOuterAligned = Math.abs(outerRotation % 360) <= tolerance;
-    
-    if (isInnerAligned && isOuterAligned && value >= 49 && value <= 51) {
+    const isInnerAligned = Math.abs(innerRotation % 180) <= tolerance;
+    const isOuterAligned = Math.abs(outerRotation % 180) <= tolerance;
+
+    if (isInnerAligned && isOuterAligned && value >= 61 && value <= 70) {
       setIsSolved(true);
     } else {
       setIsSolved(false);
