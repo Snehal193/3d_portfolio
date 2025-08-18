@@ -35,6 +35,7 @@ import tesla from "./company/tesla.png";
 import kanbanBoard from "./kanbanBoard.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import cat from "./cat.jpg";
 
 export {
   logo,
@@ -70,4 +71,5 @@ export {
   sass,
   firebase,
   materialUI,
+  cat
 };
