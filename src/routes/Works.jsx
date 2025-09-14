@@ -65,7 +65,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
 const Works = () => {
   const location = useLocation();
-  const isProjectsRoot = location.pathname === '/projects';
+  const isProjectsRoot = location.pathname === '/craft';
 
   return (
     <>
@@ -73,7 +73,7 @@ const Works = () => {
         <>
           <motion.div variants={textVariant()}>
             <p className={`${styles.sectionSubText} `}>My work</p>
-            <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+            <h2 className={`${styles.sectionHeadText}`}>Craft.</h2>
           </motion.div>
 
           <div className='w-full flex'>

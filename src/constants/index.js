@@ -26,8 +26,8 @@ import {
       title: "About",
     },
     {
-      id: "projects",
-      title: "Projects",
+      id: "craft",
+      title: "Craft",
     },
     // {
     //   id: "snippets",
