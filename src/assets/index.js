@@ -36,6 +36,8 @@ import kanbanBoard from "./kanbanBoard.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import cat from "./cat.jpg";
+import captchaThumb from "./captcha-thumb.svg";
+import payCardThumb from "./paycard-thumb.svg";
 
 export {
   logo,
@@ -46,6 +48,8 @@ export {
   github,
   menu,
   close,
+  captchaThumb,
+  payCardThumb,
   css,
   docker,
   figma,

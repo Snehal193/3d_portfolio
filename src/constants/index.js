@@ -17,7 +17,9 @@ import {
     firebase,
     materialUI,
     sass,
-    education
+    education,
+    captchaThumb,
+    payCardThumb
   } from "../assets";
 
   export const navLinks = [
@@ -147,6 +149,27 @@ import {
         },
       ],
       image: kanbanBoard,
+      source_code_link: "https://github.com/Snehal193/3d_portfolio",
+    },
+    {
+      name: "Slider Captcha",
+      description:
+        "A fun and interactive slider CAPTCHA puzzle using a cat image. Users must rotate two circular halves to align the image by dragging a slider. Built with React and Tailwind CSS.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "slider-captcha",
+          color: "green-text-gradient",
+        },
+      ],
+      image: captchaThumb,
       source_code_link: "https://github.com/Snehal193/3d_portfolio",
     }
   ];

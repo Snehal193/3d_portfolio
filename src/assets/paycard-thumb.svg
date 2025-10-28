@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" rx="10" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2"/>
+  <text x="40" y="60" font-family="Arial" font-size="24" fill="#666666">VISA</text>
+  <text x="40" y="100" font-family="Arial" font-size="16" fill="#999999">**** **** **** ****</text>
+  <circle cx="150" cy="100" r="20" stroke="#666666" stroke-width="2" fill="none"/>
+  <path d="M150 85 L150 115 M135 100 L165 100" stroke="#666666" stroke-width="2"/>
+  <text x="40" y="150" font-family="Arial" font-size="12" fill="#999999">CARD HOLDER</text>
+  <text x="220" y="150" font-family="Arial" font-size="12" fill="#999999">MM/YY</text>
+</svg>

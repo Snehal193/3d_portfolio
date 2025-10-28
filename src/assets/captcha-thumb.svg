@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="200" fill="#FFFFFF"/>
+  
+  <!-- Grid Pattern -->
+  <g transform="translate(75,25)">
+    <!-- Outer Grid Squares -->
+    <rect x="0" y="0" width="50" height="50" fill="#E8E8E8"/>
+    <rect x="50" y="0" width="50" height="50" fill="#E0E0E0"/>
+    <rect x="100" y="0" width="50" height="50" fill="#E8E8E8"/>
+    
+    <rect x="0" y="50" width="50" height="50" fill="#D8D8D8"/>
+    <rect x="100" y="50" width="50" height="50" fill="#D8D8D8"/>
+    
+    <rect x="0" y="100" width="50" height="50" fill="#E8E8E8"/>
+    <rect x="50" y="100" width="50" height="50" fill="#E0E0E0"/>
+    <rect x="100" y="100" width="50" height="50" fill="#E8E8E8"/>
+    
+    <!-- Center Square with Rotation Icon -->
+    <rect x="50" y="50" width="50" height="50" fill="#FFFFFF"/>
+    <g transform="translate(75,75)">
+      <!-- Rotation arrows -->
+      <path d="M0,-15 A15,15 0 1,1 -13,7 L-8,7 L-13,15 L-20,7 L-15,7 A20,20 0 1,0 0,-20 Z" fill="#808080"/>
+      <path d="M0,15 A15,15 0 1,1 13,-7 L8,-7 L13,-15 L20,-7 L15,-7 A20,20 0 1,0 0,20 Z" fill="#808080"/>
+    </g>
+  </g>
+  
+  <!-- Title Text -->
+  <text x="150" y="180" text-anchor="middle" fill="#666666" font-family="Arial" font-size="16">Good Captcha</text>
+</svg>
