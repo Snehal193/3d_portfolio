@@ -130,27 +130,27 @@ import {
   ];
 
   const projects = [
-    {
-      name: "Kanban Board",
-      description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "firebase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: kanbanBoard,
-      source_code_link: "https://github.com/Snehal193/3d_portfolio",
-    },
+    // {
+    //   name: "Kanban Board",
+    //   description:
+    //     "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    //   tags: [
+    //     {
+    //       name: "react",
+    //       color: "blue-text-gradient",
+    //     },
+    //     {
+    //       name: "firebase",
+    //       color: "green-text-gradient",
+    //     },
+    //     {
+    //       name: "tailwind",
+    //       color: "pink-text-gradient",
+    //     },
+    //   ],
+    //   image: kanbanBoard,
+    //   source_code_link: "https://github.com/Snehal193/3d_portfolio",
+    // },
     {
       name: "Slider Captcha",
       description:
@@ -170,7 +170,7 @@ import {
         },
       ],
       image: captchaThumb,
-      source_code_link: "https://github.com/Snehal193/3d_portfolio",
+      source_code_link: "/craft/captcha",
     }
   ];
 

@@ -4,7 +4,7 @@ import { Experience, Hero, Navbar, Tech, StarsCanvas } from "./components";
 import Home from './routes/Home';
 import About from './routes/About';
 import Contact from './routes/Contact';
-import Works from './routes/Works';
+import Works, { ProjectsList } from './routes/Works';
 import MouseFollower from "./components/MouseFollower";
 import SliderCaptcha from "./routes/SliderCaptcha";
 
@@ -23,6 +23,7 @@ const App = () => {
               <Route index element={<Hero />} />
               <Route path="/about" element={<About />} />
               <Route path="/craft" element={<Works />}>
+                <Route index element={<ProjectsList />} />
                 <Route path="captcha" element={<SliderCaptcha />} />
               </Route>
               <Route path="/contact" element={<Contact />} />
