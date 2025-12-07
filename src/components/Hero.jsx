@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
 
         {/* Right Canvas Section - Absolute positioned for small screens */}
-        <div className="absolute md:relative inset-0 md:inset-auto w-[500px] h-full opacity-20 md:opacity-100">
+        <div className="absolute md:relative inset-0 md:inset-auto w-full md:w-[500px] h-full opacity-20 md:opacity-100">
           <CastleCanvas />
         </div>
       </div>

@@ -3,7 +3,6 @@ import { Canvas } from '@react-three/fiber';
 import React, { Suspense, useEffect, useState } from 'react'
 
 const Computers = ({isMobile}) => {
-  // const computer = useGLTF("./desktop_pc/scene.gltf");
   const computer = useGLTF("./la_casa_de_la_luna/scene.gltf");
 
   return (
@@ -40,18 +39,21 @@ const CastleCanvas = () => {
   }, []);
 
   return (
-    <Canvas
-      frameloop='demand'
-      shadows
-      dpr={[1,2]}
-      camera={{position:[20,3,5], fov:25}}
-      gl={{preserveDrawingBuffer:true}}
-    >
-      <Suspense>
-        <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2}></OrbitControls>
-        <Computers isMobile={isMobile}/>
-      </Suspense>
-    </Canvas>
+    <div className="w-full h-full">
+      <Canvas
+        frameloop='demand'
+        shadows
+        dpr={[1,2]}
+        camera={{position:[20,3,5], fov:25}}
+        gl={{preserveDrawingBuffer:true}}
+        style={{ width: '100%', height: '100%' }}
+      >
+        <Suspense>
+          <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
+          <Computers isMobile={isMobile} />
+        </Suspense>
+      </Canvas>
+    </div>
   )
 }
 
