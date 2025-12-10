@@ -39,6 +39,13 @@ import cat from "./cat.jpg";
 import captchaThumb from "./captcha-thumb.svg";
 import payCardThumb from "./paycard-thumb.svg";
 
+import img1 from "./carousel/img1.png";
+import img3 from "./carousel/img3.png";
+import img4 from "./carousel/img4.png";
+import img5 from "./carousel/img5.png";
+import img6 from "./carousel/img6.png";
+import img2 from "./carousel/img2.png";
+
 export {
   logo,
   backend,
@@ -75,5 +82,11 @@ export {
   sass,
   firebase,
   materialUI,
-  cat
+  cat,
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6
 };

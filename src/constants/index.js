@@ -21,6 +21,12 @@ import {
     captchaThumb,
     payCardThumb
   } from "../assets";
+  import img1 from "../assets/carousel/img1.png";
+  import img2 from "../assets/carousel/img2.png";
+  import img3 from "../assets/carousel/img3.png";
+  import img4 from "../assets/carousel/img4.png";
+  import img5 from "../assets/carousel/img5.png";
+  import img6 from "../assets/carousel/img6.png";
 
   export const navLinks = [
     {
@@ -171,7 +177,33 @@ import {
       ],
       image: captchaThumb,
       source_code_link: "/craft/captcha",
+    },
+      {
+      name: "Kinetic Carousel",
+      description:
+        "A fun and interactive slider CAPTCHA puzzle using a cat image. Users must rotate two circular halves to align the image by dragging a slider. Built with React and Tailwind CSS.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        }
+      ],
+      image: captchaThumb,
+      source_code_link: "/craft/kinetic-carousel",
     }
   ];
 
-  export { services, technologies, experiences, projects };
+  const carouselImages = [
+    { id: 1, src: img1, alt: "Carousel Image 1" },
+    { id: 2, src: img2, alt: "Carousel Image 2" },
+    { id: 3, src: img3, alt: "Carousel Image 3" },
+    { id: 4, src: img4, alt: "Carousel Image 4" },
+    { id: 5, src: img5, alt: "Carousel Image 5" },
+    { id: 6, src: img6, alt: "Carousel Image 6" },
+  ];
+
+  export { services, technologies, experiences, projects, carouselImages };
