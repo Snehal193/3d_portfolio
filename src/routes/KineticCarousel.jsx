@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { SectionWrapper } from '../hoc';
 import classNames from 'classnames';
 import { carouselImages } from '../constants';
@@ -6,23 +6,57 @@ import { styles } from '../styles';
 
 const KineticCarousel = () => {
  const [activeIndex, setActiveIndex] = useState(2);
+  const wrapperRef = useRef(null);
+  const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    if (!wrapperRef.current) return;
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    wrapperRef.current.style.setProperty(
+      "--transition",
+      "600ms cubic-bezier(0.22, 0.61, 0.36, 1)"
+    );
+
+    timeoutRef.current = setTimeout(() => {
+      wrapperRef.current?.style.removeProperty("--transition");
+    }, 900);
+
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [activeIndex]);
+
 
   return (
     <div className="w-full flex flex-col items-center justify-center px-4 py-20">
-      <div className="w-[1200px] max-w-full relative z-0">
-        <ul className="flex h-[390px] gap-2">
-          {carouselImages.map((image, index) => (
-            <li aria-current={activeIndex === index} key={image.id}
-             className={className("w-[8%] hover:w-[12%] first:w-[1%] last:w-[1%] [&[aria-current='true']]:w-[48%]",
-             "bg-gray rounded-2xl overflow-hidden relative z-0",
-             )}
-             >
-              <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
+      <div className="w-[1200px] max-w-full">
+        <ul ref={wrapperRef} className="group flex h-[390px] gap-[1%]">
+        {carouselImages.map((image, index) => (
+            <li
+              aria-current={activeIndex === index}
+              key={image.id}
+              onMouseEnter={() => setActiveIndex(index)}
+              className={classNames(
+                "relative w-[8%] first:w-[1%] last:w-[1%] [&[aria-current='true']]:w-[48%]",
+                "before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-[-6px] before:right-[-6px] before:bg-white before:z-0",
+                "[transition:width_var(--transition,200ms_ease-in)]",
+                "hover:w-[14%] [&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-[7%]",
+                "first:pointer-events-none last:pointer-events-none"
+              )}
+            >
+            <div className="bg-gray overflow-hidden h-full w-full relative">
+              <img src={image.src} alt={image.alt} width={640} height={590} 
+              className="absolute z-10 w-[640px] h-[590px] object-cover block  max-w-non left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+            </div>
             </li>
           ))}
         </ul>
       </div>
-
     </div>
   );
 };
