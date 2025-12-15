@@ -46,6 +46,12 @@ import img5 from "./carousel/img5.png";
 import img6 from "./carousel/img6.png";
 import img2 from "./carousel/img2.png";
 
+import img7 from "./carousel/img7.png";
+import img8 from "./carousel/img8.png";
+import img9 from "./carousel/img9.png";
+import img10 from "./carousel/img10.png";
+import img11 from "./carousel/img11.png";
+
 export {
   logo,
   backend,
@@ -88,5 +94,10 @@ export {
   img3,
   img4,
   img5,
-  img6
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11
 };

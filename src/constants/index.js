@@ -18,15 +18,9 @@ import {
     materialUI,
     sass,
     education,
-    captchaThumb,
-    payCardThumb
-  } from "../assets";
-  import img1 from "../assets/carousel/img1.png";
-  import img2 from "../assets/carousel/img2.png";
-  import img3 from "../assets/carousel/img3.png";
-  import img4 from "../assets/carousel/img4.png";
-  import img5 from "../assets/carousel/img5.png";
-  import img6 from "../assets/carousel/img6.png";
+    captchaThumb  } from "../assets";
+  import { img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11 } from "../assets";
+
 
   export const navLinks = [
     {
@@ -204,6 +198,11 @@ import {
     { id: 4, src: img4, alt: "Carousel Image 4" },
     { id: 5, src: img5, alt: "Carousel Image 5" },
     { id: 6, src: img6, alt: "Carousel Image 6" },
+    { id: 7, src: img7, alt: "Carousel Image 7" },
+    { id: 8, src: img8, alt: "Carousel Image 8" },
+    { id: 9, src: img9, alt: "Carousel Image 9" },
+    { id: 10, src: img10, alt: "Carousel Image 10" },
+    { id: 11, src: img11, alt: "Carousel Image 11" }
   ];
 
   export { services, technologies, experiences, projects, carouselImages };
