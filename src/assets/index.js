@@ -38,6 +38,7 @@ import tripguide from "./tripguide.png";
 import cat from "./cat.jpg";
 import captchaThumb from "./captcha-thumb.svg";
 import payCardThumb from "./paycard-thumb.svg";
+import carouselThumb from "./carousel-thumb.svg";
 
 import img1 from "./carousel/img1.png";
 import img3 from "./carousel/img3.png";
@@ -63,6 +64,7 @@ export {
   close,
   captchaThumb,
   payCardThumb,
+  carouselThumb,
   css,
   docker,
   figma,

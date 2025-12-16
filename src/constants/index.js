@@ -18,7 +18,8 @@ import {
     materialUI,
     sass,
     education,
-    captchaThumb  } from "../assets";
+    captchaThumb,
+    carouselThumb } from "../assets";
   import { img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11 } from "../assets";
 
 
@@ -175,7 +176,7 @@ import {
       {
       name: "Kinetic Carousel",
       description:
-        "A fun and interactive slider CAPTCHA puzzle using a cat image. Users must rotate two circular halves to align the image by dragging a slider. Built with React and Tailwind CSS.",
+        "An interactive kinetic image carousel that highlights one image at a time. Hover or tap to expand a tile, view a larger preview, and navigate with thumbnails — built with React and Tailwind CSS for smooth, responsive animations.",
       tags: [
         {
           name: "react",
@@ -186,23 +187,23 @@ import {
           color: "pink-text-gradient",
         }
       ],
-      image: captchaThumb,
+      image: carouselThumb,
       source_code_link: "/craft/kinetic-carousel",
     }
   ];
 
   const carouselImages = [
-    { id: 1, src: img1, alt: "Carousel Image 1" },
-    { id: 2, src: img2, alt: "Carousel Image 2" },
-    { id: 3, src: img3, alt: "Carousel Image 3" },
-    { id: 4, src: img4, alt: "Carousel Image 4" },
-    { id: 5, src: img5, alt: "Carousel Image 5" },
-    { id: 6, src: img6, alt: "Carousel Image 6" },
-    { id: 7, src: img7, alt: "Carousel Image 7" },
-    { id: 8, src: img8, alt: "Carousel Image 8" },
-    { id: 9, src: img9, alt: "Carousel Image 9" },
-    { id: 10, src: img10, alt: "Carousel Image 10" },
-    { id: 11, src: img11, alt: "Carousel Image 11" }
+    { id: 1, src: img1, thumb: img1, alt: "Carousel Image 1" },
+    { id: 2, src: img2, thumb: img2, alt: "Carousel Image 2" },
+    { id: 3, src: img3, thumb: img3, alt: "Carousel Image 3" },
+    { id: 4, src: img4, thumb: img4, alt: "Carousel Image 4" },
+    { id: 5, src: img5, thumb: img5, alt: "Carousel Image 5" },
+    { id: 6, src: img6, thumb: img6, alt: "Carousel Image 6" },
+    { id: 7, src: img7, thumb: img7, alt: "Carousel Image 7" },
+    { id: 8, src: img8, thumb: img8, alt: "Carousel Image 8" },
+    { id: 9, src: img9, thumb: img9, alt: "Carousel Image 9" },
+    { id: 10, src: img10, thumb: img10, alt: "Carousel Image 10" },
+    { id: 11, src: img11, thumb: img11, alt: "Carousel Image 11" }
   ];
 
   export { services, technologies, experiences, projects, carouselImages };

@@ -16,7 +16,7 @@ const App = () => {
     <BrowserRouter>
       <div className="relative min-h-screen">
         <div className="fixed inset-0 pointer-events-none z-50">
-          {/* <MouseFollower /> */}
+          <MouseFollower />
         </div>
         <div className="relative z-10">
           <Routes>

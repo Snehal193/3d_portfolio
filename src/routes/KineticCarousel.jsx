@@ -1,8 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { SectionWrapper } from '../hoc';
 import classNames from 'classnames';
 import { carouselImages } from '../constants';
-import { styles } from '../styles';
 
 const KineticCarousel = () => {
  const [activeIndex, setActiveIndex] = useState(2);
@@ -22,7 +21,7 @@ const KineticCarousel = () => {
 
     timeoutRef.current = setTimeout(() => {
       wrapperRef.current?.style.removeProperty("--transition");
-    }, 900);
+    }, 500);
 
     return () => {
       if (timeoutRef.current) {
@@ -31,11 +30,10 @@ const KineticCarousel = () => {
     };
   }, [activeIndex]);
 
-
   return (
     <div className="w-full flex flex-col items-center justify-center px-4 py-20">
       <div className="w-[1200px] max-w-full">
-        <ul ref={wrapperRef} className="group flex h-[390px] gap-[1%]">
+        <ul ref={wrapperRef} className="group flex h-[390px] gap-[0.5%]">
         {carouselImages.map((image, index) => (
             <li
               aria-current={activeIndex === index}
@@ -43,15 +41,19 @@ const KineticCarousel = () => {
               onMouseEnter={() => setActiveIndex(index)}
               className={classNames(
                 "relative w-[8%] first:w-[1%] last:w-[1%] [&[aria-current='true']]:w-[48%]",
-                "before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-[-6px] before:right-[-6px] before:bg-white before:z-0",
+                "before:content-[''] before:absolute before:top-0 before:bottom-0 before:left-[-6px] before:right-[-6px] before:z-0",
                 "[transition:width_var(--transition,200ms_ease-in)]",
-                "hover:w-[14%] [&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-[7%]",
-                "first:pointer-events-none last:pointer-events-none"
+                "hover:w-[14%] [&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-[7%]"
               )}
             >
             <div className="bg-gray overflow-hidden h-full w-full relative">
-              <img src={image.src} alt={image.alt} width={640} height={590} 
-              className="absolute z-10 w-[640px] h-[590px] object-cover block  max-w-non left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+              <img
+                src={image.src}
+                alt={image.alt}
+                width={640}
+                height={590}
+                className="absolute z-10 w-[640px] h-[590px] object-cover block max-w-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              />
             </div>
             </li>
           ))}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="340" height="220" viewBox="0 0 340 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="340" height="220" rx="10" fill="#F7F7F7" />
+  <rect x="12" y="12" width="316" height="196" rx="8" fill="#FFFFFF" />
+
+  <!-- left slim columns -->
+  <g fill="#EFEFEF">
+    <rect x="28" y="42" width="20" height="120" rx="3" />
+    <rect x="56" y="60" width="20" height="84" rx="3" />
+  </g>
+
+  <!-- large center preview -->
+  <rect x="96" y="48" width="140" height="112" rx="6" fill="#DADADA" />
+
+  <!-- right slim columns (three) -->
+  <g fill="#EFEFEF">
+    <rect x="252" y="44" width="16" height="120" rx="3" />
+    <rect x="272" y="44" width="16" height="120" rx="3" />
+    <rect x="292" y="44" width="16" height="120" rx="3" />
+  </g>
+
+  <!-- subtle bottom shadow for depth -->
+  <rect x="96" y="168" width="140" height="6" rx="3" fill="#F0F0F0" />
+</svg>
