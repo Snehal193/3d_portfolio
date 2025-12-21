@@ -8,6 +8,7 @@ import Works, { ProjectsList } from './routes/Works';
 import MouseFollower from "./components/MouseFollower";
 import SliderCaptcha from "./routes/SliderCaptcha";
 import KineticCarousel from "./routes/KineticCarousel";
+import Paycard from "./routes/Paycard";
 
 
 const App = () => {
@@ -27,9 +28,9 @@ const App = () => {
                 <Route index element={<ProjectsList />} />
                 <Route path="captcha" element={<SliderCaptcha />} />
                 <Route path="kinetic-carousel" element={<KineticCarousel />} />
+                <Route path="paycard" element={<Paycard />} />
               </Route>
               <Route path="/contact" element={<Contact />} />
-              {/* <Route path="/snippets" element={ <About />} /> */}
             </Route>
           </Routes>
         </div>
