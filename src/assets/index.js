@@ -53,6 +53,10 @@ import img9 from "./carousel/img9.png";
 import img10 from "./carousel/img10.png";
 import img11 from "./carousel/img11.png";
 
+import creditCard from "./paycard/credit_card_bg.jpeg";
+import visa from "./paycard/visa.png";
+import chip from "./paycard/chip.png";
+
 export {
   logo,
   backend,
@@ -101,5 +105,8 @@ export {
   img8,
   img9,
   img10,
-  img11
+  img11,
+  creditCard,
+  visa,
+  chip,
 };
