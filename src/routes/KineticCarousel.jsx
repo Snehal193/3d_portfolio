@@ -4,9 +4,28 @@ import classNames from 'classnames';
 import { carouselImages } from '../constants';
 
 const KineticCarousel = () => {
- const [activeIndex, setActiveIndex] = useState(2);
+  const [activeIndex, setActiveIndex] = useState(2);
+  const [loadedImages, setLoadedImages] = useState(new Set());
   const wrapperRef = useRef(null);
   const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    const imagePromises = carouselImages.map((image) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => {
+          setLoadedImages((prev) => new Set([...prev, image.id]));
+          resolve();
+        };
+        img.onerror = reject;
+        img.src = image.src;
+      });
+    });
+
+    Promise.all(imagePromises).catch((error) => {
+      console.error('Error preloading images:', error);
+    });
+  }, []);
 
   useEffect(() => {
     if (!wrapperRef.current) return;
@@ -31,10 +50,10 @@ const KineticCarousel = () => {
   }, [activeIndex]);
 
   return (
-    <div className="w-full flex flex-col items-center justify-center px-4 py-20">
+    <div className="w-full flex flex-col items-center justify-center px-4 py-20 h-[78vh]">
       <div className="w-[1200px] max-w-full">
         <ul ref={wrapperRef} className="group flex h-[390px] gap-[0.5%]">
-        {carouselImages.map((image, index) => (
+          {carouselImages.map((image, index) => (
             <li
               aria-current={activeIndex === index}
               key={image.id}
@@ -46,17 +65,31 @@ const KineticCarousel = () => {
                 "hover:w-[14%] [&:not(:hover),&:not(:first),&:not(:last)]:group-hover:w-[7%]"
               )}
             >
-            <div className="bg-gray overflow-hidden h-full w-full relative">
-              <img
-                src={image.src}
-                alt={image.alt}
-                width="590"
-                height="640"
-                loading="eager"
-                decoding="async"
-                className="absolute z-10 w-[640px] h-[590px] object-cover block max-w-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform-gpu transition-transform duration-200 ease-out"
-              />
-            </div>
+              <div className="bg-gray-800 overflow-hidden h-full w-full relative">
+                {!loadedImages.has(image.id) && (
+                  <div className="absolute inset-0 z-20 bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 animate-pulse">
+                    <div className="absolute inset-0 bg-gray-700/50 blur-xl"></div>
+                  </div>
+                )}
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  width="590"
+                  height="640"
+                  loading="eager"
+                  decoding="async"
+                  onLoad={() => {
+                    setLoadedImages((prev) => new Set([...prev, image.id]));
+                  }}
+                  className={classNames(
+                    "absolute z-10 w-[640px] h-[590px] object-cover block max-w-none left-1/2 top-1/2 -translate-x-1/2",
+                    "-translate-y-1/2 transform-gpu transition-all duration-300 ease-out",
+                    loadedImages.has(image.id)
+                      ? "opacity-100 scale-100"
+                      : "opacity-0 scale-105"
+                  )}
+                />
+              </div>
             </li>
           ))}
         </ul>
