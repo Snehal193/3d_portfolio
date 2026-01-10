@@ -15,8 +15,8 @@ const Paycard = () => {
   const [state, setState] = useState(initialState);
 
   const updateStateValues = useCallback((key, value) => {
-    setState(prev => ({ ...prev, [key]: value || '' }));
-  }, []);
+    setState({ ...state, [key]: value || '' });
+  }, [state]);
 
   return (
     <CardForm card={state} onUpdateCard={updateStateValues}>

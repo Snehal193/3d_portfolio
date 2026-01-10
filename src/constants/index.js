@@ -19,6 +19,7 @@ import {
     sass,
     education,
     captchaThumb,
+      payCardThumb,
     carouselThumb } from "../assets";
   import { img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11 } from "../assets";
 
@@ -176,7 +177,7 @@ import {
       {
       name: "Kinetic Carousel",
       description:
-        "An interactive kinetic image carousel that highlights one image at a time. Hover or tap to expand a tile, view a larger preview, and navigate with thumbnails — built with React and Tailwind CSS for smooth, responsive animations.",
+        "An interactive kinetic image carousel that highlights one image at a time. Hover or tap to expand a tile, view a larger preview, and navigate with thumbnails, built with React and Tailwind CSS for smooth animations.",
       tags: [
         {
           name: "react",
@@ -190,6 +191,28 @@ import {
       image: carouselThumb,
       source_code_link: "/craft/kinetic-carousel",
     }
+        ,
+        {
+          name: "Paycard UI",
+          description:
+            "A responsive credit-card payment UI with live preview, input formatting and validation, built with React and Tailwind CSS.",
+          tags: [
+            {
+              name: "react",
+              color: "blue-text-gradient",
+            },
+            {
+              name: "tailwind",
+              color: "pink-text-gradient",
+            },
+            {
+              name: "ui",
+              color: "green-text-gradient",
+            },
+          ],
+          image: payCardThumb,
+          source_code_link: "/craft/paycard",
+        }
   ];
 
   const carouselImages = [

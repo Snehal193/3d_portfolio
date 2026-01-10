@@ -36,8 +36,8 @@ import kanbanBoard from "./kanbanBoard.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import cat from "./cat.jpg";
-import captchaThumb from "./captcha-thumb.svg";
-import payCardThumb from "./paycard-thumb.svg";
+import captchaThumb from "./captcha-thumb.png";
+import payCardThumb from "./paycard-thumb.png";
 import carouselThumb from "./carousel-thumb.svg";
 
 import img1 from "./carousel/img1.png";
