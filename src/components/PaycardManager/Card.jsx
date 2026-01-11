@@ -31,19 +31,26 @@ const Card = ({
               </div>
               <img src={visa} alt="visa" className="w-20 object-contain" />
             </div>
-            <div className="flex-grow flex items-center">
+            <div className="flex-grow flex flex-col justify-center">
+              <div className="text-[10px] opacity-80 mb-1">Card Number</div>
               <div className="w-full text-2xl tracking-widest font-mono text-white">
-                {displayed}
+                {cardNumber ? displayed : '**** **** **** ****'}
               </div>
             </div>
             <div className="flex items-end justify-between text-sm">
               <div>
                 <div className="text-[10px] opacity-80">Card Holder</div>
-                <div className="uppercase font-semibold">{cardHolder}</div>
+                <div className="uppercase font-semibold">
+                  {cardHolder || 'FULL NAME'}
+                </div>
               </div>
               <div className="text-right">
                 <div className="text-[10px] opacity-80">Expires</div>
-                <div className="font-semibold">{cardMonth}/{cardYear}</div>
+                <div className="font-semibold flex items-center">
+                  <span className="min-w-[20px] text-right">{cardMonth || 'MM'}</span>
+                  <span className="mx-1">/</span>
+                  <span className="min-w-[20px] text-left">{cardYear || 'YY'}</span>
+                </div>
               </div>
             </div>
           </div>

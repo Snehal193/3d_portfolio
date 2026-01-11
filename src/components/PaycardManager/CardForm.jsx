@@ -90,7 +90,7 @@ const CardForm = ({ card, onUpdateCard, onReset, children }) => {
             name="cardHolder"
             value={card.cardHolder || ''}
             onChange={handleFormChange}
-            maxLength={30}
+            maxLength={25}
             className="mt-1 block w-full border border-gray-300 bg-gray-50 rounded-md p-3 text-black placeholder-gray-400 focus:border-gray-300 focus:ring-1 focus:outline-none"
             placeholder="Full name"
           />
