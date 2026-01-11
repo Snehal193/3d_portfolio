@@ -65,11 +65,11 @@ const CardForm = ({ card, onUpdateCard, onReset, children }) => {
   };
 
   return (
-    <div className="w-full flex flex-col mx-auto max-w-md justify-center items-center">
-      <div className="mb-8 w-full">
+    <div className="w-full flex flex-col mx-auto max-w-md">
+      <div className="mb-6 sm:mb-8 w-full">
         {React.cloneElement(children, { isFlipped: isCvvFocused })}
       </div>
-      <div className="bg-white rounded-xl p-6">
+      <div className="bg-white rounded-xl p-6 w-full">
         <div className="mt-6">
           <label className="block text-xs font-semibold text-gray-500 mb-2">Card Number</label>
           <input
@@ -136,7 +136,7 @@ const CardForm = ({ card, onUpdateCard, onReset, children }) => {
                 inputMode="numeric"
                 placeholder="CVC"
                 maxLength={3}
-                className="mt-1 flex-1 border border-gray-300 bg-gray-50 rounded-md p-2 text-black placeholder-gray-400 focus:border-gray-300 focus:ring-0 focus:outline-none"
+                className="w-20 mt-1 flex-1 border border-gray-300 bg-gray-50 rounded-md p-2 text-black placeholder-gray-400 focus:border-gray-300 focus:ring-0 focus:outline-none"
               />
 
               <button

@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { SectionWrapper } from '../hoc';
 import classNames from 'classnames';
 import { carouselImages } from '../constants';
+import BackButton from '../components/BackButton';
 
 const KineticCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(2);
@@ -50,9 +51,16 @@ const KineticCarousel = () => {
   }, [activeIndex]);
 
   return (
-    <div className="w-full flex flex-col items-center justify-center px-4 py-20 h-[78vh]">
-      <div className="w-[1200px] max-w-full">
-        <ul ref={wrapperRef} className="group flex h-[390px] gap-[0.5%]">
+    <div className="min-h-[calc(100vh-80px)] flex flex-col pb-8 px-4">
+      <div className="w-full max-w-7xl mx-auto flex-1 flex flex-col">
+        <BackButton to="/craft" />
+        <div className="mb-4">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-2">Kinetic Carousel</h2>
+          <p className="text-secondary text-sm sm:text-base">An interactive carousel that grows and opens in scale in response to mouse interactions.</p>
+        </div>
+        <div className="flex-1 flex flex-col items-center justify-center w-full">
+          <div className="w-full max-w-[1200px]">
+            <ul ref={wrapperRef} className="group flex h-[300px] sm:h-[390px] gap-[0.5%]">
           {carouselImages.map((image, index) => (
             <li
               aria-current={activeIndex === index}
@@ -92,7 +100,9 @@ const KineticCarousel = () => {
               </div>
             </li>
           ))}
-        </ul>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );

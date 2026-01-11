@@ -37,7 +37,7 @@ const Hero = () => {
                 <a href="https://x.com/bitterblackbrew" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <FontAwesomeIcon icon={faTwitter} className="w-8 h-8 text-[#915EFF] hover:scale-110 transition-transform" />
                 </a>
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+                <a href="https://drive.google.com/drive/u/0/folders/1v7Hwh3U7Tg720df-E8VXN6yLO2ZKYzun" target="_blank" rel="noopener noreferrer" aria-label="Resume">
                   <FontAwesomeIcon icon={faFileAlt} className="w-8 h-8 text-[#915EFF] hover:scale-110 transition-transform" />
                 </a>
               </div>

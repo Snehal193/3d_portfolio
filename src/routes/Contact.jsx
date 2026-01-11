@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { EarthCanvas, StarsCanvas } from "../components";
+import BackButton from "../components/BackButton";
 
 const Contact = () => {
   const formRef = useRef();
@@ -56,6 +57,8 @@ const Contact = () => {
   }
 
   return (
+    <>
+    <BackButton to="/" routeName="Home" />
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
         variants={slideIn('left','tween',0.2,1)}
@@ -126,9 +129,10 @@ const Contact = () => {
        className='xl:flex-1 xl:h-auto md:h-[550px] has-[350px]:'
       >
       <EarthCanvas/>
-      </motion.div>
-      <StarsCanvas />
-    </div>
+        </motion.div>
+        <StarsCanvas />
+      </div>
+    </>
   )
 }
 

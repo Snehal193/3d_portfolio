@@ -8,6 +8,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import BackButton from "../components/BackButton";
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   const navigate = useNavigate();
@@ -58,6 +59,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 export const ProjectsList = SectionWrapper(() => {
   return (
     <>
+      <BackButton to="/" routeName="Home" />
       <motion.div variants={textVariant()}>
         <h2 className={`${styles.sectionHeadText}`}>Craft.</h2>
       </motion.div>
