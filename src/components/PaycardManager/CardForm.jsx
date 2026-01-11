@@ -1,41 +1,73 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRotateRight } from '@fortawesome/free-solid-svg-icons'
 
-const CardForm = ({ card, onUpdateCard, children }) => {
+const CardForm = ({ card, onUpdateCard, onReset, children }) => {
+  const [isCvvFocused, setIsCvvFocused] = useState(false);
 
+  // Generic handler for text inputs (card holder name)
   const handleFormChange = (event) => {
     const { name, value } = event.target;
     onUpdateCard(name, value);
   };
 
+  // Formats card number in groups of 4 digits
   const handleNumberChange = (event) => {
-    let { name, value } = event.target;
-    // allow only digits and spaces, and format in groups of 4
+    const { name, value } = event.target;
     const cleaned = value.replace(/[^0-9]/g, '').slice(0, 16);
     const formatted = cleaned.replace(/(.{4})/g, '$1 ').trim();
     onUpdateCard(name, formatted);
   };
 
-  const handleTwoDigitChange = (event) => {
+  // Validates month (01-12) and auto-formats single digits with leading zero
+  const handleMonthChange = (event) => {
+    const { name, value } = event.target;
+    const cleaned = value.replace(/[^0-9]/g, '');
+    
+    if (cleaned === '') {
+      onUpdateCard(name, '');
+      return;
+    }
+    
+    if (cleaned.length === 1) {
+      const num = parseInt(cleaned);
+      if (num >= 1 && num <= 9) {
+        // Auto-format single digits with leading zero (1 -> 01, 2 -> 02, etc.)
+        onUpdateCard(name, `0${num}`);
+      } else if (num === 0) {
+        onUpdateCard(name, '0');
+      }
+    } else if (cleaned.length === 2) {
+      const num = parseInt(cleaned);
+      if (num >= 1 && num <= 12) {
+        onUpdateCard(name, cleaned);
+      }
+    }
+  };
+
+  const handleYearChange = (event) => {
     const { name, value } = event.target;
     const cleaned = value.replace(/[^0-9]/g, '').slice(0, 2);
     onUpdateCard(name, cleaned);
   };
 
+  const handleCvvChange = (event) => {
+    const { name, value } = event.target;
+    const cleaned = value.replace(/[^0-9]/g, '').slice(0, 3);
+    onUpdateCard(name, cleaned);
+  };
+
   const handleReset = () => {
-    // clear all card fields
-    onUpdateCard('cardNumber', '');
-    onUpdateCard('cardHolder', '');
-    onUpdateCard('cardMonth', '');
-    onUpdateCard('cardYear', '');
-    onUpdateCard('cardCvv', '');
+    setIsCvvFocused(false);
+    if (onReset) {
+      onReset();
+    }
   };
 
   return (
     <div className="w-full flex flex-col mx-auto max-w-md justify-center items-center">
       <div className="mb-8 w-full">
-        {children}
+        {React.cloneElement(children, { isFlipped: isCvvFocused })}
       </div>
       <div className="bg-white rounded-xl p-6">
         <div className="mt-6">
@@ -71,7 +103,7 @@ const CardForm = ({ card, onUpdateCard, children }) => {
               <input
                 name="cardMonth"
                 value={card.cardMonth || ''}
-                onChange={handleTwoDigitChange}
+                onChange={handleMonthChange}
                 inputMode="numeric"
                 placeholder="MM"
                 maxLength={2}
@@ -83,7 +115,7 @@ const CardForm = ({ card, onUpdateCard, children }) => {
               <input
                 name="cardYear"
                 value={card.cardYear || ''}
-                onChange={handleTwoDigitChange}
+                onChange={handleYearChange}
                 inputMode="numeric"
                 placeholder="YY"
                 maxLength={2}
@@ -98,10 +130,12 @@ const CardForm = ({ card, onUpdateCard, children }) => {
               <input
                 name="cardCvv"
                 value={card.cardCvv || ''}
-                onChange={handleFormChange}
+                onChange={handleCvvChange}
+                onFocus={() => setIsCvvFocused(true)}
+                onBlur={() => setIsCvvFocused(false)}
                 inputMode="numeric"
                 placeholder="CVC"
-                maxLength={4}
+                maxLength={3}
                 className="mt-1 flex-1 border border-gray-300 bg-gray-50 rounded-md p-2 text-black placeholder-gray-400 focus:border-gray-300 focus:ring-0 focus:outline-none"
               />
 

@@ -15,19 +15,25 @@ const Paycard = () => {
   const [state, setState] = useState(initialState);
 
   const updateStateValues = useCallback((key, value) => {
-    setState({ ...state, [key]: value || '' });
-  }, [state]);
+    setState((prev) => ({ ...prev, [key]: value || '' }));
+  }, []);
+
+  const handleReset = useCallback(() => {
+    setState(initialState);
+  }, []);
 
   return (
-    <CardForm card={state} onUpdateCard={updateStateValues}>
-      <Card
-        cardNumber={state.cardNumber}
-        cardHolder={state.cardHolder}
-        cardMonth={state.cardMonth}
-        cardYear={state.cardYear}
-        cardCvv={state.cardCvv}
-      ></Card>
-    </CardForm>
+    <div className="min-h-[calc(100vh-80px)] flex items-center justify-center py-8 px-4">
+      <CardForm card={state} onUpdateCard={updateStateValues} onReset={handleReset}>
+        <Card
+          cardNumber={state.cardNumber}
+          cardHolder={state.cardHolder}
+          cardMonth={state.cardMonth}
+          cardYear={state.cardYear}
+          cardCvv={state.cardCvv}
+        ></Card>
+      </CardForm>
+    </div>
   )
 }
 
